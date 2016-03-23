@@ -58,6 +58,10 @@
 </head>
 
 <body>
+  <script>
+    var databasestring = jQuery.get('database.txt', function(data) { alert(data); } );
+    document.write(databasestring);
+  </script>
   <div class = "main">
     <div class = "hpbar"></div>
     <span class = "statdesc">Health: 100/100</span><br />
