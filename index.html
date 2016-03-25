@@ -57,6 +57,25 @@
   </style>
 </head>
 
+<script>
+  var text = "";
+  var event = getCookie("event");
+  if (event == "")
+  {
+    event = 0;
+  }
+  
+  switch (event)
+  {
+    case 0:
+      text = "This is the introductory screen.";
+      break;
+    default:
+      text = "DUMMY";
+      break;
+  }
+</script>
+
 <body>
   <div class = "main">
     <div class = "hpbar"></div>
@@ -65,7 +84,9 @@
     <span class = "statdesc">Stamina: 100/100</span><br />
     <br /><br />
     <div class = "body">
-      BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+      <script>
+        document.write(text);
+      </script>
     </div>
   </div>
 </body>
