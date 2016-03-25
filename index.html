@@ -83,11 +83,11 @@
     <div class = "spbar"></div>
     <span class = "statdesc">Stamina: 100/100</span><br />
     <br /><br />
-    <div class = "body">
-      <script>
-        document.write(text);
-      </script>
+    <div id = "log" class = "body">
     </div>
   </div>
 </body>
+<script>
+  document.getElementById('log').innerHTML += text;
+</script>
 </html>
