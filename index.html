@@ -97,14 +97,14 @@
   var maxspincrease = 0;
   
   var position = getCookie("position");
-  var hp = getCookie("hp");
+  //var hp = getCookie("hp");
   var sp = getCookie("sp");
-  var maxhp = getCookie("maxhp");
+  //var maxhp = getCookie("maxhp");
   var maxsp = getCookie("maxsp");
   
-  if (hp == ""){ hp = 100; }
+  //if (hp == ""){ hp = 100; }
   if (sp == ""){ sp = 100; }
-  if (maxhp == ""){ maxhp = 100; }
+  //if (maxhp == ""){ maxhp = 100; }
   if (maxsp == ""){ maxsp = 100; }
   
   switch (position)
@@ -114,6 +114,7 @@
       hpincrease = -50;
       break;
   }
+  hp = 100;
   hp += hpincrease;
   sp += spincrease;
   
