@@ -143,18 +143,17 @@
     sp = parseInt(getCookie("sp"));
     maxhp = parseInt(getCookie("maxhp"));
     maxsp = parseInt(getCookie("maxsp"));
-    position = 0;
+    position = parseInt(position);
   }
   else
   {
-    position = parseInt(position);
+    position = 0;
   }
   
   if (hp == ""){ hp = 100; }
   if (sp == ""){ sp = 100; }
   if (maxhp == ""){ maxhp = 100; }
   if (maxsp == ""){ maxsp = 100; }
-  alert("a");
   switch (position)
   {
     // Title
