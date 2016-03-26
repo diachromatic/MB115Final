@@ -150,25 +150,26 @@
     if (choices.substr(i, i + 1) != "~" && choices.substr(i, i + 1) != ";")
     {
       choicetextdump += choices.substr(i, i + 1);
+      alert(choicetextdump);
     }
     else
     {
-      if (choice1 == "")
+      if (choice1 == "" || path1 == "")
       {
         if (choices.substr(i, i + 1) == "~") { choice1 = choicetextdump; }
         else { path1 = parseInt(choicetextdump); }
       }
-      else if (choice2 == "")
+      else if (choice2 == "" || path2 == "")
       {
         if (choices.substr(i, i + 1) == "~") { choice2 = choicetextdump; }
         else { path2 = parseInt(choicetextdump); }
       }
-      else if (choice3 == "")
+      else if (choice3 == "" || path3 == "")
       {
         if (choices.substr(i, i + 1) == "~") { choice3 = choicetextdump; }
         else { path3 = parseInt(choicetextdump); }
       }
-      else if (choice4 == "")
+      else if (choice4 == "" || path4 == "")
       {
         if (choices.substr(i, i + 1) == "~") { choice4 = choicetextdump; }
         else { path4 = parseInt(choicetextdump); }
