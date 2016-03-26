@@ -81,7 +81,6 @@
     var path;
     switch (indicator)
     {
-      alert("");
       case 1:
         path = path1;
         break;
@@ -211,6 +210,8 @@
   
   if (hp > maxhp) { hp = maxhp; }
   if (sp > maxsp) { sp = maxsp; }
+  
+  alert(position);
 
   document.getElementById("log").innerHTML = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
