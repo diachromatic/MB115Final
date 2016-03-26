@@ -109,7 +109,6 @@
     <div id = "log" class = "body"></div>
     <br />
     <div class = "body" style = "width: 30%">
-      <div><a href = '#' onclick = 'selectEvent(1)'>????</a></div>
       <div id = "choice1"></div>
       <div id = "choice2"></div>
       <div id = "choice3"></div>
@@ -183,7 +182,7 @@
       if (choice1 == "" || path1 == "")
       {
         if (choices.charAt(i) == "~") { choice1 = choicetextdump; }
-        else { path1 = parseInt(choicetextdump); }
+        else { path1 = parseInt(choicetextdump); alert(''); }
       }
       else if (choice2 == "" || path2 == "")
       {
