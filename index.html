@@ -93,26 +93,41 @@
   var text = "";
   var hpincrease = 0;
   var spincrease = 0;
+  var maxhpincrease = 0;
+  var maxspincrease = 0;
   
   var position = getCookie("position");
   var hp = getCookie("hp");
   var sp = getCookie("sp");
+  var maxhp = getCookie("maxhp");
+  var maxsp = getCookie("maxsp");
   
   if (hp == ""){ hp = 100; }
   if (sp == ""){ sp = 100; }
+  if (maxhp == ""){ maxhp = 100; }
+  if (maxsp == ""){ maxsp = 100; }
   
   switch (position)
   {
     case "":
       text = "Introductory scene";
+      hpincrease = -50;
       break;
   }
   hp += hpincrease;
   sp += spincrease;
-    document.getElementById("log").innerText = text;
-    
-    setCookie("hp", hp, 365);
-    setCookie("sp", sp, 365);
+  
+  if (hp > maxhp) { hp = maxhp; }
+  if (sp > maxsp) { sp = maxsp; }
+
+  document.getElementById("log").innerText = text;
+  document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
+  document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
+  
+  setCookie("hp", hp, 365);
+  setCookie("sp", sp, 365);
+  setCookie("maxhp", maxhp, 365);
+  setCookie("maxsp", maxsp, 365);
 </script>
 
 </html>
