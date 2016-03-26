@@ -94,7 +94,6 @@
         path = path4;
         break;
     }
-     document.getElementById("log").innerHTML = path1 + path2 + path3 + path4;
     setCookie("position", path, 365);
     reload();
   }
@@ -161,7 +160,8 @@
     // Title
     case 0:
       text = "<b><font size = 150%>The Adventurer's Forest</font></b><br />A text-based roleplaying game<br /><br /><br />Click the text below to advance.";
-      choices = "Next ~ 1";
+      choices = "Next";
+      path1 = "1";
       break;
     // Introduction
     case 1:
@@ -173,32 +173,27 @@
   var choicetextdump = "";
   while (i < choices.length)
   {
-    if (choices.charAt(i) != "~" && choices.charAt(i) != ";")
+    if (choices.charAt(i) != ";")
     {
       choicetextdump += choices.charAt(i);
-      alert(choices.charAt(i));
     }
     else
     {
-      if (choice1 == "" || path1 == "")
+      if (choice1 == "")
       {
-        if (choices.charAt(i) == "~") { choice1 = choicetextdump; alert('1'); }
-        if (choices.charAt(i) == ";") { path1 = parseInt(choicetextdump); alert('2'); }
+        choice1 = choicetextdump;
       }
-      else if (choice2 == "" || path2 == "")
+      else if (choice2 == "")
       {
-        if (choices.charAt(i) == "~") { choice2 = choicetextdump; }
-        else { path2 = parseInt(choicetextdump); }
+        choice2 = choicetextdump;
       }
-      else if (choice3 == "" || path3 == "")
+      else if (choice3 == "")
       {
-        if (choices.charAt(i) == "~") { choice3 = choicetextdump; }
-        else { path3 = parseInt(choicetextdump); }
+        choice3 = choicetextdump;
       }
-      else if (choice4 == "" || path4 == "")
+      else if (choice4 == "")
       {
-        if (choices.charAt(i) == "~") { choice4 = choicetextdump; }
-        else { path4 = parseInt(choicetextdump); }
+        choice4 = choicetextdump;
       }
       
       choicetextdump = "";
