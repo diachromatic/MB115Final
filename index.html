@@ -74,11 +74,13 @@
       text = "DUMMY";
       break;
   }
-  alert(text);
-  document.getElementById("log").innerText = text;
 </script>
 
 <body>
+  <script>
+    alert(text);
+    document.getElementById("log").innerText = text;
+  </script>
   <div class = "main">
     <div class = "hpbar"></div>
     <span class = "statdesc">Health: 100/100</span><br />
@@ -86,7 +88,7 @@
     <span class = "statdesc">Stamina: 100/100</span><br />
     <br /><br />
     <div id = "log" class = "body">
-      c
+      d
     </div>
   </div>
 </body>
