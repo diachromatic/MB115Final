@@ -149,12 +149,9 @@
     if (choices.charAt(i) != "~" && choices.charAt(i) != ";")
     {
       choicetextdump += choices.charAt(i);
-      alert(choicetextdump);
     }
     else
     {
-      choicetextdump = "";
-      
       if (choice1 == "" || path1 == "")
       {
         if (choices.charAt(i) == "~") { choice1 = choicetextdump; }
@@ -175,6 +172,8 @@
         if (choices.charAt(i) == "~") { choice4 = choicetextdump; }
         else { path4 = parseInt(choicetextdump); }
       }
+      
+      choicetextdump = "";
     }
     
     i++;
