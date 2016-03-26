@@ -211,7 +211,7 @@
   if (hp > maxhp) { hp = maxhp; }
   if (sp > maxsp) { sp = maxsp; }
 
-  document.getElementById("log").innerHTML = text;
+  document.getElementById("log").innerText = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
   document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
