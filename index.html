@@ -69,23 +69,8 @@
     </div>
   </div>
   <script>
-  var text = "";
-  var event = getCookie("event");
-  if (event == "")
-  {
-    event = 0;
-  }
   
-  switch (event)
-  {
-    case 0:
-      text = "This is the introductory screen.";
-      break;
-    default:
-      text = "DUMMY";
-      break;
-  }
-  text = "DUMMY";
+  var text = "DUMMY";
     document.getElementById("log").innerText = text;
   </script>
 </body>
