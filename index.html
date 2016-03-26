@@ -183,7 +183,7 @@
       if (choice1 == "" || path1 == "")
       {
         if (choices.charAt(i) == "~") { choice1 = choicetextdump; alert('1'); }
-        else { path1 = parseInt(choicetextdump); alert('2'); }
+        if (choices.charAt(i) == ";") { path1 = parseInt(choicetextdump); alert('2'); }
       }
       else if (choice2 == "" || path2 == "")
       {
