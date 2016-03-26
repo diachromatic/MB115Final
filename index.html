@@ -91,36 +91,42 @@
 
 <script>
   var text = "";
+  var hp = 100;
+  var sp = 100;
+  var maxhp = 100;
+  var maxsp = 100;
   var hpincrease = 0;
   var spincrease = 0;
   var maxhpincrease = 0;
   var maxspincrease = 0;
   
   var position = getCookie("position");
-  //var hp = getCookie("hp");
-  var sp = getCookie("sp");
-  //var maxhp = getCookie("maxhp");
-  var maxsp = getCookie("maxsp");
+  if (position != "")
+  {
+    hp = parseInt(getCookie("hp"));
+    sp = parseInt(getCookie("sp"));
+    maxhp = parseInt(getCookie("maxhp"));
+    maxsp = parseInt(getCookie("maxsp"));
+  }
   
-  //if (hp == ""){ hp = 100; }
+  if (hp == ""){ hp = 100; }
   if (sp == ""){ sp = 100; }
-  //if (maxhp == ""){ maxhp = 100; }
+  if (maxhp == ""){ maxhp = 100; }
   if (maxsp == ""){ maxsp = 100; }
   
   switch (position)
   {
     case "":
       text = "Introductory scene";
-      hpincrease = 50;
+      hpincrease = -50;
       break;
   }
-  var maxhp = 100;
-  var hp = 100;
+  
   hp += hpincrease;
   sp += spincrease;
   
-  //if (hp > maxhp) { hp = maxhp; }
-  //if (sp > maxsp) { sp = maxsp; }
+  if (hp > maxhp) { hp = maxhp; }
+  if (sp > maxsp) { sp = maxsp; }
 
   document.getElementById("log").innerText = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
