@@ -57,7 +57,18 @@
   </style>
 </head>
 
-<script>
+<body>
+  <div class = "main">
+    <div class = "hpbar"></div>
+    <span class = "statdesc">Health: 100/100</span><br />
+    <div class = "spbar"></div>
+    <span class = "statdesc">Stamina: 100/100</span><br />
+    <br /><br />
+    <div id = "log" class = "body">
+      g
+    </div>
+  </div>
+  <script>
   var text = "";
   var event = getCookie("event");
   if (event == "")
@@ -75,21 +86,7 @@
       break;
   }
   text = "DUMMY";
-</script>
-
-<body>
-  <div class = "main">
-    <div class = "hpbar"></div>
-    <span class = "statdesc">Health: 100/100</span><br />
-    <div class = "spbar"></div>
-    <span class = "statdesc">Stamina: 100/100</span><br />
-    <br /><br />
-    <div id = "log" class = "body">
-      g
-    </div>
-  </div>
-  <script>
-    document.getElementById("log").innerText = "DUMMY";
+    document.getElementById("log").innerText = text;
   </script>
 </body>
 </html>
