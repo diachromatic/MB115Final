@@ -122,7 +122,7 @@
   //if (sp > maxsp) { sp = maxsp; }
 
   document.getElementById("log").innerText = text;
-  document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
+  document.getElementById("hptext").innerText = hp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
   document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
   document.getElementById("spbar").width = (document.getElementById("spbar").width / maxsp) * sp;
