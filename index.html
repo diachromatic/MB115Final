@@ -147,31 +147,31 @@
   while (i < choices.length)
   {
     i++;
-    if (choices.substr(i, i + 1) != "~" && choices.substr(i, i + 1) != ";")
+    if (choices.charAt(i) != "~" && choices.charAt(i) != ";")
     {
-      choicetextdump += choices.substr(i, i + 1);
+      choicetextdump += choices.charAt(i);
       alert(choicetextdump);
     }
     else
     {
       if (choice1 == "" || path1 == "")
       {
-        if (choices.substr(i, i + 1) == "~") { choice1 = choicetextdump; }
+        if (choices.charAt(i) == "~") { choice1 = choicetextdump; }
         else { path1 = parseInt(choicetextdump); }
       }
       else if (choice2 == "" || path2 == "")
       {
-        if (choices.substr(i, i + 1) == "~") { choice2 = choicetextdump; }
+        if (choices.charAt(i) == "~") { choice2 = choicetextdump; }
         else { path2 = parseInt(choicetextdump); }
       }
       else if (choice3 == "" || path3 == "")
       {
-        if (choices.substr(i, i + 1) == "~") { choice3 = choicetextdump; }
+        if (choices.charAt(i) == "~") { choice3 = choicetextdump; }
         else { path3 = parseInt(choicetextdump); }
       }
       else if (choice4 == "" || path4 == "")
       {
-        if (choices.substr(i, i + 1) == "~") { choice4 = choicetextdump; }
+        if (choices.charAt(i) == "~") { choice4 = choicetextdump; }
         else { path4 = parseInt(choicetextdump); }
       }
     }
