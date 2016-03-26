@@ -75,6 +75,11 @@
     }
     return "";
   }
+  
+  function selectEvent(indicator)
+  {
+    
+  }
 </script>
 <body>
   <div class = "main">
@@ -83,9 +88,11 @@
     <div id = "spbar" class = "spbar"></div>
     <span id = "sptext" class = "statdesc">Stamina: 100/100</span><br />
     <br /><br />
-    <div id = "log" class = "body">
-      h
-    </div>
+    <div id = "log" class = "body"></div>
+    <div id = "choice1"></div>
+    <div id = "choice2"></div>
+    <div id = "choice3"></div>
+    <div id = "choice4"></div>
   </div>
 </body>
 
@@ -99,6 +106,10 @@
   var spincrease = 0;
   var maxhpincrease = 0;
   var maxspincrease = 0;
+  
+  var choice1 = "";
+  var choice2 = "";
+  var choice2 = "";
   
   var position = getCookie("position");
   if (position != "")
@@ -118,6 +129,9 @@
   {
     case "":
       text = "Introductory scene";
+      choice1 = "Choice 1";
+      choice2 = "Choice 2";
+      choice3 = "Choice 3";
       break;
   }
   
@@ -132,6 +146,8 @@
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
   document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
   document.getElementById("spbar").width = (document.getElementById("spbar").width / maxsp) * sp;
+  
+  document.getElementById("choice1").innerHTML = "<a href = '' onclick = 'selectEvent(1)'";
   
   setCookie("hp", hp, 365);
   setCookie("sp", sp, 365);
