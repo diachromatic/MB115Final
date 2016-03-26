@@ -78,10 +78,10 @@
 </script>
 <body>
   <div class = "main">
-    <div class = "hpbar"></div>
-    <span class = "statdesc">Health: 100/100</span><br />
-    <div class = "spbar"></div>
-    <span class = "statdesc">Stamina: 100/100</span><br />
+    <div id = "hpbar" class = "hpbar"></div>
+    <span id = "hptext" class = "statdesc">Health: 100/100</span><br />
+    <div id = "spbar" class = "spbar"></div>
+    <span id = "sptext" class = "statdesc">Stamina: 100/100</span><br />
     <br /><br />
     <div id = "log" class = "body">
       h
@@ -123,6 +123,8 @@
   document.getElementById("log").innerText = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
+  document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
+  document.getElementById("spbar").width = (document.getElementById("spbar").width / maxsp) * sp;
   
   setCookie("hp", hp, 365);
   setCookie("sp", sp, 365);
