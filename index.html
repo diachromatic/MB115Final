@@ -78,7 +78,23 @@
   
   function selectEvent(indicator)
   {
-    // store new event position to cookie
+    var path;
+    switch (indicator)
+    {
+      case 1:
+        path = path1;
+        break;
+      case 2:
+        path = path2;
+        break;
+      case 3:
+        path = path3;
+        break;
+      case 4:
+        path = path4;
+        break;
+    }
+    setCookie("position", path, 365);
   }
 </script>
 <body>
@@ -127,6 +143,11 @@
     sp = parseInt(getCookie("sp"));
     maxhp = parseInt(getCookie("maxhp"));
     maxsp = parseInt(getCookie("maxsp"));
+    position = 0;
+  }
+  else
+  {
+    position = parseInt(position);
   }
   
   if (hp == ""){ hp = 100; }
@@ -136,9 +157,14 @@
   
   switch (position)
   {
-    case "":
-      text = "Introductory scene";
-      choices = "First choice ~ 1; Second choice ~ 2";
+    // Title
+    case 0:
+      text = "<b><font size = 150%>The Adventurer's Forest</font></b><br /><br />A text-based fantasy roleplaying game<br /><br /><br />Click the text below to advance.";
+      choices = "Next ~ 1";
+      break;
+    // Introduction
+    case 1:
+      text = "Your name is Dia.<br /><br />You have adventured far and wide, searching for your own path and trying to find a way to help the world. Finally you have found an epic quest to captivate your interest, and help the continent of Fauxe along the way!<br />As you understand it, the continent has been under siege by a Dark Lord, hellbent on conquering first Fauxe, then the rest of the world. The only way to stop him is to collect powerful magic-filled orbs and combat him face to face."
       break;
   }
   
@@ -185,7 +211,7 @@
   if (hp > maxhp) { hp = maxhp; }
   if (sp > maxsp) { sp = maxsp; }
 
-  document.getElementById("log").innerText = text;
+  document.getElementById("log").innerHTML = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
   document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
