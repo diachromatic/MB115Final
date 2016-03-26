@@ -146,7 +146,6 @@
   var choicetextdump = "";
   while (i < choices.length)
   {
-    i++;
     if (choices.charAt(i) != "~" && choices.charAt(i) != ";")
     {
       choicetextdump += choices.charAt(i);
@@ -154,6 +153,8 @@
     }
     else
     {
+      choicetextdump = "";
+      
       if (choice1 == "" || path1 == "")
       {
         if (choices.charAt(i) == "~") { choice1 = choicetextdump; }
@@ -175,6 +176,8 @@
         else { path4 = parseInt(choicetextdump); }
       }
     }
+    
+    i++;
   }
   
   hp += hpincrease;
