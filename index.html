@@ -160,8 +160,7 @@
     // Title
     case 0:
       text = "<b><font size = 150%>The Adventurer's Forest</font></b><br />A text-based roleplaying game<br /><br /><br />Click the text below to advance.";
-      choices = "Next";
-      path1 = "1";
+      choices = "Next ~ 1;";
       break;
     // Introduction
     case 1:
@@ -173,27 +172,31 @@
   var choicetextdump = "";
   while (i < choices.length)
   {
-    if (choices.charAt(i) != ";")
+    if (choices.charAt(i) != ";" && choices.charAt(i) != "~")
     {
       choicetextdump += choices.charAt(i);
     }
     else
     {
-      if (choice1 == "")
+      if (choice1 == "" || path1 == "")
       {
-        choice1 = choicetextdump;
+        if (choices.charAt(i) == "~") { choice1 = choicetextdump; }
+        else{ path1 = choicetextdump; }
       }
-      else if (choice2 == "")
+      else if (choice2 == "" || path2 == "")
       {
-        choice2 = choicetextdump;
+        if (choices.charAt(i) == "~") { choice2 = choicetextdump; }
+        else{ path2 = choicetextdump; }
       }
-      else if (choice3 == "")
+      else if (choice3 == "" || path3 == "")
       {
-        choice3 = choicetextdump;
+        if (choices.charAt(i) == "~") { choice3 = choicetextdump; }
+        else{ path3 = choicetextdump; }
       }
-      else if (choice4 == "")
+      else if (choice4 == "" || path4 == "")
       {
-        choice4 = choicetextdump;
+        if (choices.charAt(i) == "~") { choice4 = choicetextdump; }
+        else{ path4 = choicetextdump; }
       }
       
       choicetextdump = "";
