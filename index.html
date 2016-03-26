@@ -219,10 +219,10 @@
   document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
   document.getElementById("spbar").width = (document.getElementById("spbar").width / maxsp) * sp;
   
-  if (choice1 != ""){ document.getElementById("choice1").innerHTML = "<a href = '' onclick = 'selectEvent(1)'>" + choice1 +"</a>"; }
-  if (choice2 != ""){ document.getElementById("choice2").innerHTML = "<a href = '' onclick = 'selectEvent(2)'>" + choice2 +"</a>"; }
-  if (choice3 != ""){ document.getElementById("choice3").innerHTML = "<a href = '' onclick = 'selectEvent(3)'>" + choice3 +"</a>"; }
-  if (choice4 != ""){ document.getElementById("choice4").innerHTML = "<a href = '' onclick = 'selectEvent(4)'>" + choice4 +"</a>"; }
+  if (choice1 != ""){ document.getElementById("choice1").innerHTML = "<a onclick = 'selectEvent(1)'>" + choice1 +"</a>"; }
+  if (choice2 != ""){ document.getElementById("choice2").innerHTML = "<a onclick = 'selectEvent(2)'>" + choice2 +"</a>"; }
+  if (choice3 != ""){ document.getElementById("choice3").innerHTML = "<a onclick = 'selectEvent(3)'>" + choice3 +"</a>"; }
+  if (choice4 != ""){ document.getElementById("choice4").innerHTML = "<a onclick = 'selectEvent(4)'>" + choice4 +"</a>"; }
   
   setCookie("hp", hp, 365);
   setCookie("sp", sp, 365);
