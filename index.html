@@ -79,6 +79,10 @@
     return "";
   }
   
+  function deleteCookie(c_name) {
+    document.cookie = encodeURIComponent(c_name) + "=deleted; expires=" + new Date(0).toUTCString();
+  }
+  
   function selectEvent(indicator)
   {
     var path;
@@ -104,6 +108,7 @@
     }
     else
     {
+      setCookie("actions", 1, 365);
       setCookie("position", path, 365);
       location.reload();
     }
@@ -166,6 +171,7 @@
   var path3 = "";
   var path4 = "";
   
+  var actions = getCookie("actions");
   var position = getCookie("position");
   if (position != "")
   {
@@ -338,23 +344,28 @@
   }
   
   // Variable edits
-  if (maxhpset != 0) { maxhp = maxhpset; }
-  if (maxspset != 0) { maxsp = maxspset; }
-  maxhp += maxhpincrease;
-  maxsp += maxspincrease;
-  if (hpset != 0) { hp = hpset; }
-  if (spset != 0) { sp = spset; }
-  hp += hpincrease;
-  sp += spincrease;
+  if (actions == 1)
+  {
+    if (maxhpset != 0) { maxhp = maxhpset; }
+    if (maxspset != 0) { maxsp = maxspset; }
+    maxhp += maxhpincrease;
+    maxsp += maxspincrease;
+    if (hpset != 0) { hp = hpset; }
+    if (spset != 0) { sp = spset; }
+    hp += hpincrease;
+    sp += spincrease;
+    
+    if (hp > maxhp) { hp = maxhp; }
+    if (sp > maxsp) { sp = maxsp; }
+  }
   
-  if (hp > maxhp) { hp = maxhp; }
-  if (sp > maxsp) { sp = maxsp; }
+  deleteCookie("actions");
 
   document.getElementById("log").innerHTML = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
-  document.getElementById("hpbar").width = (document.getElementById("hpbar").width / maxhp) * hp;
-  document.getElementById("spbar").width = (document.getElementById("spbar").width / maxsp) * sp;
+  document.getElementById("hpbar").style.width = (document.getElementById("hpbar").style.width / maxhp) * hp;
+  document.getElementById("spbar").style.width = (document.getElementById("spbar").style.width / maxsp) * sp;
   
   if (choice1 != ""){ document.getElementById("choice1").innerHTML = "<a href = '#' onclick = 'selectEvent(1)'>" + choice1 +"</a>"; }
   if (choice2 != ""){ document.getElementById("choice2").innerHTML = "<a href = '#' onclick = 'selectEvent(2)'>" + choice2 +"</a>"; }
