@@ -365,7 +365,7 @@
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
   document.getElementById("hpbar").style.width = "" + hp + "px";
-  document.getElementById("spbar").style.width = "" + (document.getElementById("spbar").style.width / maxsp) * sp + "px";
+  document.getElementById("spbar").style.width = "" + sp + "px";
   
   if (choice1 != ""){ document.getElementById("choice1").innerHTML = "<a href = '#' onclick = 'selectEvent(1)'>" + choice1 +"</a>"; }
   if (choice2 != ""){ document.getElementById("choice2").innerHTML = "<a href = '#' onclick = 'selectEvent(2)'>" + choice2 +"</a>"; }
