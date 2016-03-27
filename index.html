@@ -138,10 +138,15 @@
   var sp = 100;
   var maxhp = 100;
   var maxsp = 100;
+  
   var hpincrease = 0;
   var spincrease = 0;
   var maxhpincrease = 0;
   var maxspincrease = 0;
+  var hpset = 0;
+  var spset = 0;
+  var maxhpset = 0;
+  var maxspset = 0;
   
   var choices = "";
   var choice1 = "";
@@ -181,6 +186,15 @@
     // Introduction
     case 1:
       text = "Your name is Dia.<br /><br />You have adventured far and wide, searching for your own path and trying to find a way to help the world. Finally you have found an epic quest to captivate your interest, and help the continent of Fauxe along the way!<br />As you understand it, the continent has been under siege by a Dark Lord, hellbent on conquering first Fauxe, then the rest of the world. The only way to stop him is to collect powerful magic-filled orbs and combat him face to face."
+      choices = "Next ~ 2;";
+      break;
+    case 2:
+      text = "You are meeting with the great king of the land, King Lucius XVIII. After briefly repeating the previous details you had already known, he goes into more depth. The Dark Lord is a great being who has already torn asunder the land of Fauxe to a grand degree, vanquishing entire towns with a wave of his hand, and destroying the natural order of things. The Dark Lord's name is apparently Lucian - strikingly familiar to the king's name.";
+      choice = "Voice your concern ~ 3; Keep listening to the story ~ 4;";
+      break;
+    case 3:
+      text = "You mention the similarity in naming, and ask if there is any resemblance. The king sighs, then explains. The Dark Lord Lucian was indeed Prince Lucius XIX, the next in line after the current king - the one standing before you now. Lucius XIX abandoned his duty and abandoned his name, becoming the Dark Lord Lucian. No one knows why he did what he did, but for the good of the world he must be destroyed - even if he is son to the king.";
+      choice = "Next ~ 4";
       break;
   }
   
@@ -221,8 +235,15 @@
     i++;
   }
   
+  // Variable edits
   hp += hpincrease;
   sp += spincrease;
+  maxhp += maxhpincrease;
+  maxsp += maxspincrease;
+  if (hpset != 0) { hp = hpset; }
+  if (spset != 0) { sp = spset; }
+  if (maxhpset != 0) { maxhp = maxhpset; }
+  if (maxspset != 0) { maxsp = maxspset; }
   
   if (hp > maxhp) { hp = maxhp; }
   if (sp > maxsp) { sp = maxsp; }
