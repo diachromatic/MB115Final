@@ -386,6 +386,58 @@
       maxspset = maxhpset;
       spset = maxhpset;
       break;
+    case 34:
+      text = "You awake on the ground, at the bottom of the mountain. Looks like you passed out - had a weird dream, too. You decide not to tell anyone about it for now.<br />Felix bends down over you. \"You okay, Dia? You absorbed that orb or something, then fell asleep. We carried you down. Everything alright?\" You nod and say that you\'re fine. Breathing a sigh of relief, Felix backs away from you, and you stand up, feeling rather refreshed. Now that you have the orb, looks like it\'s time to confront the Dark Lord. You look across the sky for an indicator of darkness, and see the sky shift to a pitch black hue to the northeast. Looking at your map, you see that the location of the darkness seems to be the Adventurer\'s Forest. You set off towards it.";
+      choices = "Next ~ 35;";
+      maxhpset = 160;
+      hpset = maxhpset;
+      maxspset = maxhpset;
+      spset = maxhpset;
+      break;
+    case 35:
+      text = "Finally entering the forest after a long journey, you feel a gloominess hanging over your head. You press on, your party working towards a rather large castle within the depths of the forest - likely where the Dark Lord is hiding. Since you are so far away from the dimensional tear that the Dark Lord made, it doesn't seem like many monsters have gotten here yet, luckily for you. Finally, you reach the castle, and force open the large doors barring your entry. You hesitate for a moment, then walk in with the rest of your party.";
+      choices = "Next ~ 36;";
+      break;
+    case 36:
+      text = "You walk into a large entryway, your footsteps echoing across the room. A voice calls to you. \"I knew you would come, Heroes.\" The voice seems calm, though some scorn seems to come from that final word. The air shimmers, and fog collects in the center of the room, forming to create a human shape. A man then appears and floats in the air, clad in black robes, silver hair reaching down to his feet and amethyst eyes gazing at you. \"Come to destroy Lucian of the Dark - or Dark Lord, as you all like to call me. And with what sword? Only the fabled Holy Sealing Blade, used to seal dark monsters with ease. It is a fake? No, not at all.\" He smirks, for a moment betraying his solemn tone. \"It seals monsters, that is correct. But I am no monster. I am simply a scholar who learned the truth.\" He looks at you specifically now. \"Dia...the one who stole a glance at my memories. I'm sure your curious. Wouldn't you like to know the truth?\"";
+      choices = "Yes ~ 37; No ~ 38;";
+      break;
+    case 37:
+      text = "You nod slowly, your friends in shock at your response. \"Very well,\" Lucian says. \"I hope you are prepared...\" He raises a hand, and a bolt of energy shoots into you, causing you to glow with a purple light and sending thousands of images into your mind at once. You suddenly understand now...what humanity's sin is. It is as Lucian said - the only way to erase our sin is to erase everything. You immediately take your old sword, and slice through each of your comrades in turn, then walk toward Lucian. He frowns sadly at you. \"I am sorry, new friend. Thank you for helping me with my mission.\"<br /><br />The End.";
+      choices = "Restart ~ 0;";
+      break;
+    case 38:
+      text = "You shake your head, and point your old sword at him. He sighs. \"I'm sorry, then. You will die without ever knowing why.\" He raises his hand, and your friends rise up into the air, grabbing at their necks as if they were choking. He floats your friends in front of him. \"You will not be able to reach me if you do not cut down your friends. I'm sorry, but I cannot allow you to stop my mission.\"";
+      choices = "Cut through Felix ~ 40; Stop ~ 39;";
+      break;
+    case 39:
+      text = "You drop your sword to the ground, unable to hurt your friends. Lucian smiles. \"I am happy, Dia. You at least have some form of a heart. Your compliance will not be forgotten, until this world is nothing.\" He raises his free hand. As he clenches it into a fist, you feel your breath taken away, and are choked to death by him with the rest of your friends.";
+      choices = "";
+      hpset = -10;
+      break;
+    case 40:
+      text = "You cut down Felix, who falls to the ground and begins bleeding out, unable to move and unable to die quickly. Duncan floats in front of you now. You feel awful. Lucian sighs in disgust.";
+      choices = "Cut through Duncan ~ 41; Stop ~ 43;";
+      hpincrease = -50;
+      spincrease = -10;
+      break;
+    case 41:
+      text = "You cut down Duncan, who falls to the ground, exactly the same as Felix. The two bodies lying in blood beside you make your heart feel like it is going to stop. Garrett floats in front of you now.";
+      choices = "Cut through Garrett ~ 42; Stop ~ 43;";
+      hpincrease = -50;
+      spincrease = -10;
+      break;
+    case 42:
+      text = "You cut down Garrett, who falls to the ground, his blood pooling under him. You fall to your knees, horrified by your own actions. Tears drip from your face. Lucian looks down at you. \"And this...this is humanity's sin. Why everything needs to be erased. I thought you were different, but it looks like the world isn't safe after all.\" He closes his eyes and sighs. \"At least you seem to feel bad for cutting down your friends so easily. I'll make this quick for you - you're already suffering enough.\" He raises his hand, and slices down with it. You feel a slash go through your chest, and your life fades quickly.";
+      choices = "";
+      hpincrease = -70;
+      spincrease = -10;
+      break;
+    case 43:
+      text = "You drop your sword to the ground, unable to hurt any more of your friends. Lucian smiles. \"I am happy, Dia. At least you stopped yourself before killing every one of your friends. Your compliance will not be forgotten, until this world is nothing.\" He raises his free hand. As he clenches it into a fist, you feel your breath taken away, and are choked to death by him with the rest of your friends.";
+      choices = "";
+      hpset = -10;
+      break;
   }
   
   var i = 0;
