@@ -97,8 +97,16 @@
         path = path4;
         break;
     }
-    setCookie("position", path, 365);
-    location.reload();
+    if (path == 0)
+    {
+      hardReset();
+      location.reload();
+    }
+    else
+    {
+      setCookie("position", path, 365);
+      location.reload();
+    }
   }
   
   function hardReset()
@@ -196,6 +204,100 @@
       text = "You mention the similarity in naming, and ask if there is any resemblance. The king sighs, then explains. The Dark Lord Lucian was indeed Prince Lucius XIX, the next in line after the current king - the one standing before you now. Lucius XIX abandoned his duty and abandoned his name, becoming the Dark Lord Lucian. No one knows why he did what he did, but for the good of the world he must be destroyed - even if he is son to the king.";
       choices = "Next ~ 4;";
       break;
+    case 4:
+      text = "The Dark Lord has tried to destroy parts of the continent with almighty dark power, creating tears in the fabric of the world. From these tears, horrible monsters have escaped, and are beginning to seep into the world. Luckily, the Dark Lord does not seem powerful to create these tears too often, and only three exist around the continent. Scout reports have shown that there is a small orb within each of them, apparently darker than darkness itself. Through research the king and his scholars believe that these are offshoots of the Dark Lord's power. He suggests that you destroy the orbs, in order to cripple the Dark Lord and reduce his power.";
+      choices = "Next ~ 5;";
+      break;
+    case 5:
+      text = "After finishing his explanation, the king walks to the back of the room, opening a large display case and taking out a brilliant sword. He presents the sword, jewel-encrusted and seeming to glow with a holy light, before you. Explaining that this was named the Holy Sealing Blade, he entrusts you with the sword and asks that you use it against the Dark Lord - it has been handed down from generation to generation and is the only artifact that can seal great evil. You gladly take it in your hands, and walk from the throne room in which you held your meeting, promising to return with great news.";
+      choices = "Next ~ 6;";
+      break;
+    case 6:
+      text = "Walking from the meeting, excited and terrified at the daunting task, you come face to face with your three friends waiting outside the throne room. "So how'd it go? Can we trust him, or did he just spout nonsense?" Garrett asks.<br />Felix pipes up against him: "Of course we can trust him, he's a king! You should hold your venomous tongue for when we aren't in earshot." Felix looks around tentatively at the guards silently stationed around the waiting room, seemingly unfazed by their discussion.<br />"What do we need to do, then?" Duncan addresses you. You explain your course of action, going into detail on what the king told you. Garrett frowns. "I see he conveniently did not tell you how we're to destroy these dark orbs. Are we supposed to just swing our sword and expect this great power to dissipate?" Garrett questions.<br />"I don't know either, but we can figure it out along the way," Duncan answers, beckoning to the rest of the group as he begins walking out of the castle.";
+      choices = "Next ~ 7;";
+      break;
+    case 7:
+      text = "It is not long before you exit the stuffy castle, looking around at the grim atmosphere. It appears that the city of Luna is responding badly to news of their impending suffering from the Dark Lord. Shops are closed, houses have been evacuated and people are generally unfriendly and untrusting. You hear a scream from the edge of town, and you and your group race to the source of the noise. Four large monsters tower over a woman and a young girl, frozen in shock, another woman lying lifeless on the ground. The monsters appear to be viscous congregations of slime, dripping against the ground and looming menacingly.<br />"Oh my...I think the monsters are spreading quickly already," Felix says, a mix of fear and anger in his voice.<br />"Spread out and push them back! Dia, see if that holy sword of yours can do anything against them!" You ready the blade in your hands even before he says this, and prepare to fight back against the menace. "And everyone - be careful! Manage your health and your stamina, or you won't be alive for long!" With this, the rest of your party charges at the monsters, and you prepare for battle against your foe.";
+      choices = "Next ~ 8;";
+      break;
+    case 8:
+      text = "The horrible slime creature towers above you, about four times your size. You grip the sword in your hands. You need to be careful, and try to read its movements, or like Duncan said, you'll be killed easily.<br />The monster raises a large arm of slime, holding it above its head and gathering more slime into the arm.";
+      choices = "Attack ~ 9; Defend ~ 14;";
+      break;
+    case 9:
+      text = "You go to attack the monster, getting in a quick jab against its midsection and tearing against its slime. It groans in anger, then brings down its heavy fist against you before you can get away, smashing you against the ground and making you let go of your sword as it bounces against the ground away from you. You are lying against the ground, and it will take a moment to get back up.<br />The monster brings two arms to its side, redirecting slime to them like last time.";
+      choices = "Attack ~ 10; Defend ~ 13;";
+      hpincrease = -45;
+      spincrease = -10;
+      break;
+    case 10:
+      text = "Reaching desperately for the sword, you quickly grab it in your hands. The slime brings his arms down against you once more. As you grab your sword, you make a desperate slice above you with it, cutting the slime apart and saving you from its attack. You sigh in relief, quickly jumping up and going into a battle stance. This sword seems to work well - the creature appears to be dripping slime much more often, which may be a sign of its fatigue.<br />The slime begins to sink, spreading along the ground and dripping into pools around you. Before you can react, the slime grabs at your leg and hardens. You won't be able to dodge well like this - unfortunately for you, as a fist of slime, about three times the size of the previous ones, is about to slam into you.";
+      choices = "Attack fist ~ 11; Attack pool ~ 12;";
+      spincrease = -15;
+      break;
+    case 11:
+      text = "You slash at the fist, but the slime is too plentiful to make much of a dent. The fist slams hard into you, sending cracks and tears throughout your body, and making you cry out in extreme pain. You slump to the ground, unable to get back up.";
+      choices = "";
+      hpincrease = -55;
+      break;
+    case 12:
+      text = "You cut the slime around your foot, weakening it enough to jump away from the fist about to collapse against you. You bring down a mighty slash against the slime as it crashes against the ground, sending a shriek from the monster and causing it to melt into a large pool of liquid, slowly dissolving into the ground.";
+      choices = "Next ~ 19;";
+      spincrease = -20;
+      break;
+    case 13:
+      text = "You try to dodge the creature's twin fists, but from your current position you cannot get back up in time. The fists smash into you, slamming you into the ground and causing you to cry out in extreme pain. You slump against the ground, unable to get back up.";
+      choices = "";
+      hpincrease = -55;
+      break;
+    case 14:
+      text = "You deftly dodge the blow, the creature slamming into the ground where you stood seconds ago. Seeing your chance, you launch a counterattack, jumping at the creature and swinging powerfully into its body. You jump away as it moves upright once more, preparing your battle stance and watching for its next attack.<br />The creature expands widely, holding its arms outward and rearing backward for a moment. It looks like it is trying to charge forward at you.";
+      choices = "Run forward ~ 15; Run backward ~ 18;";
+      spincrease = -15;
+      break;
+    case 15:
+      text = "Rushing forward as the creature rushes at you, you ready your blade beside you. The creature charges, bringing his giant arms forward to slam into you - luckily, your countermovement causes the arms to slam against each other behind you, as you continue to run at the hulking beast. You leap forward at the center of the creature, bursting straight through its body as you slice it in half with your holy blade.<br />The creature groans in pain, dripping more slime from its body than before, apparently exhausted. It roars, then sends its slime pooling along the ground, quite rapidly approaching your feet.";
+      choices = "Charge forward ~ 16; Jump attack ~ 17;";
+      spincrease = -15;
+      break;
+    case 16:
+      text = "You charge at the monster, but before you can dodge, the slime grabs at your leg and hardens. You won't be able to dodge well like this - unfortunately for you, as a fist of slime, about three times the size of the previous ones, is about to slam into you.";
+      choices = "Attack fist ~ 11; Attack pool ~ 12;";
+      break;
+    case 17:
+      text = "You run along in a circular motion, running along debris above ground level and climbing quickly atop a small building nearby. Leaping from the top of the building, you plunge your sword straight into the slime creature, causing a shriek of pain from the monster and causing it to melt into a large pool of liquid, slowly dissolving into the ground.";
+      choices = "Next ~ 19;";
+      spincrease = -20;
+      break;
+    case 18:
+      text = "You quickly turn and run from the creature, but are not fast enough. You are caught by the giant's arms, slamming into you and forcing you into its liquid body. You try to escape, but your vision dims as you choke within the slime prison. Your eyes shut as your consciousness is forced from you.";
+      choices = "";
+      hpincrease = -65;
+      break;
+    case 19:
+      text = "You sigh in relief as the slime creature dissolves, then look around to see how the rest of your party is doing. Felix calls out to you. "We need help over here! We can push them back, but they won't die!"<br />"Use your sword, Dia! It may be the only thing that can permanently destroy them," Duncan calls out. You ready your sword, charging at each of the three slime creatures, cutting them down in turn. They dissipate as the first one did, letting out shrieks then vanishing without a trace. Your party stands, looking around to assess the damage, which is thankfully not too severe. Cheers come from behind as citizens come out of hiding. You smile at them, then fall to your knees. You are a bit exhausted from the shock of meeting such a creature as well as the exercise.<br /><br />You have leveled up from fighting the creature, raising your maximum health and stamina.";
+      choices = "Next ~ 20;";
+      spincrease = -20;
+      maxhpincrease = 20;
+      maxspincrease = 20;
+      break;
+    case 20:
+      text = "You rest at an inn for a few hours, the innkeeper gratefully giving you a room free of charge - as well as a map of the continent, after learning of your mission. After your rest, you discuss the strange creatures. Obviously these are the same creatures that the king explained that were seeping from the dark rifts created by the Dark Lord. Additionally, only the Holy Sealing Blade can stop them for good, so they need to be careful when fighting numerous monsters at once. Finishing your discussion, you leave the inn, heading to the outskirts of the city once more. You look out along the horizon, and can see a dark aura from far off - most likely signaling the location of a dark orb. Referencing your map, you see that the direction relates to a place named the Mountain of Origin, and begin to set out along that path.";
+      choices = "Next ~ 21;";
+      hpset = maxhp;
+      spset = maxsp;
+      break;
+  }
+  
+  if (hp <= 0)
+  {
+    hp = 0;
+    choices = "Restart ~ 0;";
+  }
+  if (sp <= 0)
+  {
+    sp = 0;
+    choices = "Restart ~ 0;";
   }
   
   var i = 0;
@@ -236,14 +338,14 @@
   }
   
   // Variable edits
-  hp += hpincrease;
-  sp += spincrease;
+  if (maxhpset != 0) { maxhp = maxhpset; }
+  if (maxspset != 0) { maxsp = maxspset; }
   maxhp += maxhpincrease;
   maxsp += maxspincrease;
   if (hpset != 0) { hp = hpset; }
   if (spset != 0) { sp = spset; }
-  if (maxhpset != 0) { maxhp = maxhpset; }
-  if (maxspset != 0) { maxsp = maxspset; }
+  hp += hpincrease;
+  sp += spincrease;
   
   if (hp > maxhp) { hp = maxhp; }
   if (sp > maxsp) { sp = maxsp; }
@@ -258,6 +360,11 @@
   if (choice2 != ""){ document.getElementById("choice2").innerHTML = "<a href = '#' onclick = 'selectEvent(2)'>" + choice2 +"</a>"; }
   if (choice3 != ""){ document.getElementById("choice3").innerHTML = "<a href = '#' onclick = 'selectEvent(3)'>" + choice3 +"</a>"; }
   if (choice4 != ""){ document.getElementById("choice4").innerHTML = "<a href = '#' onclick = 'selectEvent(4)'>" + choice4 +"</a>"; }
+  
+  if (hp == 0 || sp == 0)
+  {
+    document.getElementById("log").innerHTML += "<br /><br />You let out your final breath, too weak to continue.<br />You have perished.";
+  }
   
   setCookie("hp", hp, 365);
   setCookie("sp", sp, 365);
