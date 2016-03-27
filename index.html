@@ -364,7 +364,7 @@
   document.getElementById("log").innerHTML = text;
   document.getElementById("hptext").innerText = "Health: " + hp + "/" + maxhp;
   document.getElementById("sptext").innerText = "Stamina: " + sp + "/" + maxsp;
-  document.getElementById("hpbar").style.width = (document.getElementById("hpbar").style.width / maxhp) * hp;
+  document.getElementById("hpbar").style.width = hp;
   document.getElementById("spbar").style.width = (document.getElementById("spbar").style.width / maxsp) * sp;
   
   if (choice1 != ""){ document.getElementById("choice1").innerHTML = "<a href = '#' onclick = 'selectEvent(1)'>" + choice1 +"</a>"; }
@@ -372,7 +372,7 @@
   if (choice3 != ""){ document.getElementById("choice3").innerHTML = "<a href = '#' onclick = 'selectEvent(3)'>" + choice3 +"</a>"; }
   if (choice4 != ""){ document.getElementById("choice4").innerHTML = "<a href = '#' onclick = 'selectEvent(4)'>" + choice4 +"</a>"; }
   
-  if (hp == 0 || sp == 0)
+  if (hp <= 0 || sp <= 0)
   {
     document.getElementById("log").innerHTML += "<br /><br />You let out your final breath, too weak to continue.<br />You have perished.";
   }
