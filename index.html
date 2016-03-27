@@ -315,6 +315,45 @@
       hpset = maxhp;
       spset = maxsp;
       break;
+    case 21:
+      text = "After days of travelling, you finally come to the base of the Mountain of Origin. The mountain stretches far upward, above the clouds. A darkness seeps from the top of the mountain. You search the area, finding a small passage cutting into the mountain. Your party enters the mountain, the small passage eventually opening to a wide area within. A large shrine encompasses the area, with a sizable tombstone in the center, and strange markings in a circle along the ground below it. There are strange characters on the tombstone that you do not recognize.<br />Felix steps up. \"These characters are Faux Runes, an old language of Fauxe. I've done some study into them, just give me a moment to sort them out...\" After a few minutes of analysis, he smiles. \"\'Here lies King Lucius III, wielder of the Holy Sealing Blade.\' It appears we are not the first ones to combat evil in this realm.\"";
+      choices = "Next ~ 22;";
+      break;
+    case 22:
+      text = "As you step with the rest of your party into the circle of runes, the Holy Sealing Blade glows in your hands, and so do the runes. As you all stare at the ground, a blinding light is emitted. Suddenly, the party finds themselves on a plateau at the top of the mountain - the air crackling with darkness, the sky a haze of purple and red and an orb of pure black in the center. You begin to step toward it, when a shrieking sound comes from above, and a large black creature soars down before them. Slamming against the ground, its amethyst eyes shine menacingly, and it roars at them. \"Looks like a powerful monster is guarding the orb,\" Duncan proclaims, \"and we'll have to defeat it first. Split up around it, and attack!\" You take your blade in your hands.<br />The bird stares at you, preparing to charge.";
+      choices = "Attack ~ 23; Defend ~ 27;";
+      break;
+    case 23:
+      text = "You try to attack, but you feel fatigued and cannot hit hard enough to stop the creature's own attack. It charges into you, knocking you backward. \"Careful,\" Duncan yells, \"We're up really high. It'll probably be harder to breathe and react at this altitude!\" As the creature charges you, the others manage to get in some damage on the creature.<br />The creature cries out in pain - it looks like with four people attacking, it is easier to keep up a barrage of attacks. \"Everyone attack at once - Dia, stay back and draw the beast's attacks, you have to be the one to land the final blow!\"";
+      choices = "Attack ~ 25; Taunt ~ 24;";
+      hpincrease = -50;
+      spincrease = -50;
+      break;
+    case 24:
+      text = "You taunt the creature, while holding your sword in your hand. As it charges forward at you, you dodge to the side, and the party rushes to attack it. The monster cries out in pain. You charge at the monster, bringing down your sword for the final blow, causing it to shriek and slowly dissipate into the air.";
+      choices = "Next ~ 28;";
+      spincrease = -60;
+      break;
+    case 25:
+      text = "You launch at the creature, slicing viciously at it - but the attack is not enough. You pant from exhaustion, the thin air getting to you. You let the rest of the group launch their attack, and prepare to strike the final blow.";
+      choices = "Attack ~ 26;";
+      spincrease = -50;
+      break;
+    case 26:
+      text = "You raise your blade, struggling to hold it up, then drop it to the ground. After your last powerful attack, you are too drained to continue. You fall to the ground, watching as the creature readies its last vicious attack against the rest of the party.";
+      choices = "";
+      spincrease = -50;
+      break;
+    case 27:
+      text = "You try to get away, but you feel fatigued and cannot run fast enough to avoid the creature's attack. It charges into you, knocking you backward. \"Careful,\" Duncan yells, \"We're up really high. It'll probably be harder to breathe and react at this altitude!\" As the creature charges you, the others manage to get in some damage on the creature.<br />The creature cries out in pain - it looks like with four people attacking, it is easier to keep up a barrage of attacks. \"Everyone attack at once - Dia, stay back and draw the beast's attacks, you have to be the one to land the final blow!\"";
+      choices = "Attack ~ 25; Taunt ~ 24;";
+      hpincrease = -50;
+      spincrease = -50;
+      break;
+    case 28:
+      text = "";
+      choices = "";
+      break;
   }
   
   if (hp <= 0)
