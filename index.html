@@ -356,17 +356,6 @@
       break;
   }
   
-  if (hp <= 0)
-  {
-    hp = 0;
-    choices = "Restart ~ 0;";
-  }
-  if (sp <= 0)
-  {
-    sp = 0;
-    choices = "Restart ~ 0;";
-  }
-  
   var i = 0;
   var choicetextdump = "";
   while (i < choices.length)
@@ -418,6 +407,23 @@
     
     if (hp > maxhp) { hp = maxhp; }
     if (sp > maxsp) { sp = maxsp; }
+  }
+  
+  if (hp <= 0)
+  {
+    hp = 0;
+    choice1 = "Restart"; path1 = "0";
+    choice2 = ""; path2 = "";
+    choice3 = ""; path3 = "";
+    choice4 = ""; path4 = "";
+  }
+  if (sp <= 0)
+  {
+    sp = 0;
+    choice1 = "Restart"; path1 = "0";
+    choice2 = ""; path2 = "";
+    choice3 = ""; path3 = "";
+    choice4 = ""; path4 = "";
   }
   
   deleteCookie("actions");
